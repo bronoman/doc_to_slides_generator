@@ -1,6 +1,7 @@
 function convertFunction() {
-  var docId = openDocument();
+  var url = 'https://docs.google.com/document/d/1KuUwwmQW1nXexMP_CK3iK_WlIvehhfGlaRI4yzm0XIU/edit';
   var presName = 'MyNewPresentation';
+  var docId = openDocument(url);
   var presId = createPresentation(presName);
   createSlide(presId, docId);
   Logger.log('DONE!');
@@ -9,9 +10,8 @@ function convertFunction() {
 /**
  * open source doc and return Id.
  */
-function openDocument() {
+function openDocument(url) {
   //to do: pop-up window to select file
-  var url = 'https://docs.google.com/document/d/1KuUwwmQW1nXexMP_CK3iK_WlIvehhfGlaRI4yzm0XIU/edit';
   var doc = DocumentApp.openByUrl(url);
   return doc.getId();
 }
