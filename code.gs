@@ -136,7 +136,6 @@ function createSlide(presId, docId) {
               }
               pari = '';
               shapeText = '';
-              //console.info('...added normal: ['+ elType +']: '+ par.getText());
               console.info((slideno) +')...added normal: ['+ elType +']: '+ par.getText());
             }
           }
@@ -152,8 +151,8 @@ function createSlide(presId, docId) {
             newIm.scaleHeight(0.4);
             newIm.scaleWidth(0.4);
             // add dynamic offset, if needed
-            newIm.setTop(300);
-            newIm.setLeft(400);
+            newIm.setTop(90);
+            newIm.setLeft(380);
             console.info((slideno) +')...added image : ['+ elType +']: '+ par.getText());
           }          
         }
