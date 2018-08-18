@@ -3,10 +3,10 @@ function convert() {
   // ref: https://developers.google.com/apps-script/reference
   console.time(convert);
   console.warn('START of conversion, please wait.');
-  var url = 'https://docs.google.com/document/d/[your_url_goes_here]/edit'
-  var presName = 'Intro XYZ';
+  var url = 'https://docs.google.com/document/d/1uJL9UH-TwkowMNYLETkcciIr8oNnh39ZcpKUAZtdPVg/edit'
   var docId = openDocument(url);
-  var presId = createPresentation(presName);
+  var fileName = DocumentApp.openById(docId).getName(); 
+  var presId = createPresentation(fileName);
   createSlide(presId, docId);
   console.timeEnd(convert);
   console.warn('FINISHED conversion, please open most recent files in gDrive');
