@@ -13,7 +13,6 @@ The apps script will read the input file (based on url) and generate a slide for
 8) Select VIEW -> STACKDRIVER LOGGING from the menu to observe the progress (press play button)
 ## Known Limitations
 * Input URL hardcoded, see line 6
-* Name of presentation hardcoded, see line 7
 
 Initial beta version. Feel free to PR.
 ## License
