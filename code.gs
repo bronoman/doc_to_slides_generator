@@ -183,9 +183,14 @@ function createSlide(presId, docId) {
       slideno = pres.getSlides().length;
       console.error((slideno) +')...Found other image. NOT CONVERTED.');
     }
+    else if( type == DocumentApp.ElementType.TABLE_OF_CONTENTS ){
+      slideno = pres.getSlides().length;
+      console.error((slideno) +')...Found Table of Contents. --> NOT CONVERTED.');
+    }
     else {
-      console.error("ERROR: check what to do with this type of element : "+ type);
-      throw new Error("ERROR: check what to do with this type of element : "+ type);
+      slideno = pres.getSlides().length;
+      console.error((slideno) +')...Found unknown element: '+type + ' --> NOT CONVERTED');
+      //throw new Error("ERROR: check what to do with this type of element : "+ type);
     }
   }
 }
