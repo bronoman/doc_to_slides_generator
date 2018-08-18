@@ -3,7 +3,7 @@ function convert() {
   // ref: https://developers.google.com/apps-script/reference
   console.time(convert);
   console.warn('START of conversion, please wait.');
-  var url = 'https://docs.google.com/document/d/1uJL9UH-TwkowMNYLETkcciIr8oNnh39ZcpKUAZtdPVg/edit'
+  var url = 'https://docs.google.com/document/d/[...your doc...]/edit'
   var docId = openDocument(url);
   var fileName = DocumentApp.openById(docId).getName(); 
   var presId = createPresentation(fileName);
