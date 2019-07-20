@@ -10,7 +10,7 @@ The apps script will read the google a google doc as an input file (based on url
 
 1) Open your Google source document 
 2) Ensure it contains a title (menu: FORMAT -> PARAGRAPH STYLES) and headings for each chapter
-3) On the menu select TOOLS -> SCRIPT EDITOR and copy the code.gs file into the code section. 
+3) On the menu select TOOLS -> SCRIPT EDITOR and copy the [code.gs](https://raw.githubusercontent.com/bronoman/doc_to_slides_generator/master/code.gs) file into the code section. 
 4) Copy the url of your google document and update line 6
 5) Save the updated code.gs file
 6) Select RUN -> RUN FUNCTION -> CONVERT from the menu
