@@ -29,7 +29,7 @@ The apps script will read the google a google doc as an input file (based on url
 ## Contributing
 
 Initial beta version. Feel free to PR.
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING](CONTRIBUTING.md) for details on our [CODE OF CONDUCT](CODE_OF_CONDUCT.md), and the process for submitting pull requests.
 
 ## Versioning
 
@@ -39,11 +39,11 @@ Current 0.1 beta
 
 * **bronoman** - *Initial work* - [bronoman](https://github.com/bronoman)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+I will add a list of contributors who participated in this project later.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details
 
 ## Acknowledgments
 
