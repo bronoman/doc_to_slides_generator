@@ -1,13 +1,22 @@
 function convert() {
-  // use VIEW - STACKDRIVER LOGGING to view logs
+  // click on button [Execution log] to view logs
   // ref: https://developers.google.com/apps-script/reference
   console.time(convert);
   console.warn('START of conversion, please wait.');
-  var url = 'https://docs.google.com/document/d/[...your doc...]/edit'
+  // add the url of the source google document in the line below
+  var url = 'https://docs.google.com/document/d/1Q9mi6EPYl5tbC5ULzMHE_4is9qErDBZMOIlPtrZG4Kg/edit'
+  // add the folder ID of the target folder below (go to the gDrive folder and copy everything after https://drive.google.com/drive/folders/...)
+  var targetFolderID = '17W3O88klqe0XQpGbUAgupJNsyM2WbUrj';
   var docId = openDocument(url);
   var fileName = DocumentApp.openById(docId).getName(); 
   var presId = createPresentation(fileName);
   createSlide(presId, docId);
+  // move file to target folder (by ID)
+  var targetFile = DriveApp.getFileById(presId);
+  var targetFolder = DriveApp.getFolderById(targetFolderID);
+  console.info('Finalizing: moving file to Folder: ' + targetFolder.getName());
+  targetFile.moveTo(targetFolder);
+  // end file folder manipulation
   console.timeEnd(convert);
   console.warn('FINISHED conversion, please open most recent files in gDrive');
 }
